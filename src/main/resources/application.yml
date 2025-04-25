@@ -1,0 +1,39 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: ${spring.application.name}
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      properties:
+        specific.avro.reader: true
+        schema.registry.url: http://localhost:8085
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+    producer:
+      transaction-id-prefix: deadLetter-tx-
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+    url: jdbc:postgresql://localhost:5432/productsdb
+    username: postgres
+    password: postgres
+  application:
+    name: streams-quickstart-name
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: quickstartdb
+      username: root
+      password: root
+logging:
+  level:
+    org:
+      springframework:
+        transaction: trace
+        kafka:
+          transaction: debug
+        jdbc: debug

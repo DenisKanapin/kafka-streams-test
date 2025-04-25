@@ -1,0 +1,3 @@
+db.version()
+db.status();
+db.status()
