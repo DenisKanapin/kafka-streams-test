@@ -1,3 +1,4 @@
 streams-quickstart.iml
 target/
 .idea/
+mongo/

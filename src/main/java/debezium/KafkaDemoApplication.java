@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 @Slf4j
 @SpringBootApplication
-@EnableJpaRepositories(basePackageClasses= ProductRepository.class)
+@EnableJpaRepositories(basePackageClasses=ProductRepository.class)
 public class KafkaDemoApplication {
 
     public static void main(String[] args) {

@@ -1,0 +1,76 @@
+{
+  "type": "record",
+  "name": "AvroUserInters",
+  "namespace": "debezium.avro",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "long"
+    },
+    {
+      "name": "page1",
+      "type": "boolean"
+    },
+    {
+      "name": "page1_button",
+      "type": "boolean"
+    },
+    {
+      "name": "page2",
+      "type": "boolean"
+    },
+    {
+      "name": "page2_button",
+      "type": "boolean"
+    },
+    {
+      "name": "page3",
+      "type": "boolean"
+    },
+    {
+      "name": "page3_button",
+      "type": "boolean"
+    },
+    {
+      "name": "__op",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "__table",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "__lsn",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "__source_ts_ms",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "__deleted",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    }
+  ],
+  "connect.name": "debezium.avro.AvroUserInters"
+}
